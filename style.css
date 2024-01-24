@@ -1,0 +1,47 @@
+.container {
+ height: 200px;
+ background-color: whitesmoke;
+display: flex; flex-direction: row;
+align-items: flex-start;border-radius: 5px;
+}
+
+.item {
+ margin: 5px; z-index: 200;
+ padding: 5px;
+}
+
+#users{
+  width: 60px;
+  height: 60px;
+  border-radius: 60%;
+  border: 3px solid greenyellow;filter: brightness(110%) saturate(115%) contrast(115%) opacity(75%);
+}
+
+
+#us{
+  width: 60px;
+  height: 60px;
+  border-radius: 60%;
+  border: 3px solid greenyellow;filter: brightness(110%) saturate(115%) contrast(115%) opacity(75%);
+}
+
+
+
+#nat{
+  width: 60px;
+  height: 60px;
+  border-radius: 60%; 
+  border: 3px solid greenyellow;filter: brightness(110%) saturate(115%) contrast(115%) opacity(75%);
+}
+
+#jor{
+  width: 60px;
+  height: 60px;
+  border-radius: 60%; 
+  border: 3px solid greenyellow;filter: brightness(110%) saturate(115%) contrast(115%) opacity(75%);
+}
+
+h2  {   
+font-family: 'Segoe UI', sans-serif; font-size: 15px; z-index: -200;
+color: #FF0000;
+}
