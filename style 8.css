@@ -1,0 +1,15 @@
+#dance
+
+{ 
+
+ z-index: 200;
+ filter:brightness(102%) saturation(105%) contrast(120%) opacity(0%); 
+transform: rotate(0deg);
+ border-radius: 40px; 
+margin :auto auto auto auto;
+height :200px;
+width:240px;
+
+display: block;
+border: solid 3px blue; padding: 5px;
+}
