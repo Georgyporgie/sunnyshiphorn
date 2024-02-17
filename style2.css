@@ -8,8 +8,8 @@
 }
 
 body {
- background-color: #CCCCCC;
- margin: 0 auto;  filter:brightness(105%) saturation(105%) contrast(105%) opacity(25%);
+ background-color: transparent;
+ margin: 0 auto; 
 }
 
 #our-story,
