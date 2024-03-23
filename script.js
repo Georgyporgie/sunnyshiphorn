@@ -59,7 +59,7 @@ function update() {
  var el = document.querySelector(
   ".content, .more");
  el.innerHTML =
-  "A beautiful mix of new Dance songs<br> and older Dance & Disco classics!.";
+  "A beautiful mix of new Dance songs<br> and older Dance & Disco classics!";
 };
 
 
