@@ -41,6 +41,28 @@ align-items: flex-start;border-radius: 5px;cursor: grab;
   border: 3px solid greenyellow;filter: brightness(110%) saturate(115%) contrast(115%) opacity(75%);
 }
 
+
+#info {
+ font-family: Candara;background : linear-gradient(90deg,#00CCFF,#66CCFF); color: white; 
+border-radius: 5px; z-index: -200; width: 51px; height: 34px; font-size: 17px; display:block; margin: auto auto auto auto; z-index:-300;
+
+
+
+
+
+
+}
+
+
+
+
+p {  font-size: 19px; color: black;  text-align: center; z-index: -200; font-style:italic;  
+
+
+}
+
+
+
 h2  {   
 font-family: 'Segoe UI', sans-serif; font-size: 15px; z-index: -200;
 color: #FF0000;
