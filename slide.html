@@ -102,6 +102,14 @@ img {vertical-align: middle;}
 
 
 </div>
+
+</div>
+<audio  id="public" autoplay loop>
+<source src="" type="audio/mpeg" />
+<source src="" type="audio/wav" />
+</audio>
+
+
 <br>
 
 <div style="text-align:center">
@@ -132,6 +140,8 @@ function showSlides() {
   setTimeout(showSlides, 4500); // Change image every 2 seconds
 }
 </script>
-
+<script>
+document.getElementById("public").setAttribute('src', 'muziek/effects/Ambience Peter.mp3');
+</script>
 </body>
 </html> 
