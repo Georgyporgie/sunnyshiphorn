@@ -9,7 +9,7 @@ background-color:black;
 #marquee {
   display:block;
   width: 250px;
-  margin: 0 auto -17px ;
+  margin: auto auto auto auto;
 
   overflow: hidden;
   white-space: nowrap;
