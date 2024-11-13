@@ -23,7 +23,7 @@ z-index: 200;
 
 .footer .row a{
 text-decoration:none;
-color:gray;
+color:#000;
 transition:0.5s;
 z-index: 200;
 }
