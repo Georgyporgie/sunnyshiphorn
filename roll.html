@@ -1,44 +1,52 @@
 <!DOCTYPE html>
+
+
 <html>
 <head>
-    <title>Daily Content</title>
-    <link rel="stylesheet" href="style4.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>   </title>
+<link rel="stylesheet" href="style 4.css" >
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div id="marquee"></div>
-    <img id="myImage" alt="Daily Image">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ <div id= "marquee"> </div>
+<img id= "myImage">
 
-    <script>
-        // Array of images
-        var images = [
-            'images/Sunny rock.gif',
-            'images/Sunny rock.gif',
-            'images/transparent.png'
-            // Add more image paths here
-        ];
 
-        // Array of marquee texts
-        var texts = [
-            '',
-            'Rock You!',
-            ''
-            // Add more texts here
-        ];
 
-        // Get the current date
-        var currentDate = new Date();
 
-        // Calculate the day of the year (0-364)
-        var dayOfYear = Math.floor((currentDate - new Date(currentDate.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
 
-        // Use modulo to cycle through the images and texts arrays
-        var imageOfDay = images[dayOfYear % images.length];
-        var textOfDay = texts[dayOfYear % texts.length];
 
-        // Set the image and marquee text
-        document.getElementById("myImage").src = imageOfDay;
-        document.getElementById("marquee").innerHTML = `<span><em><strong>${textOfDay}</strong></em></span>`;
-    </script>
+
+<script src= ""> </script>
+
+<script>
+//Get our img element by using document.getElementById
+var img = document.getElementById("myImage");
+
+//Set the src property of our element to the new image URL
+img.src = 'images/Sunny Rock.png';
+</script>
+
+
+<script> 
+document.getElementById("marquee").innerHTML="<span><em><strong>Your Host Of The Day: Björn Hamburger</strong></em></span>";
+</script>
+
 </body>
+
+
 </html>
