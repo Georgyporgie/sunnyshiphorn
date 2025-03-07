@@ -17,7 +17,7 @@
 #marquee span {
   display: inline-block; font-style: italic;
   font-size: 15px;font-family: Arial ,Helvetica,sans-serif;
-  position: relative; color: black;
+  position: relative; color: transparent;
   left: 100%;background-color: #FFCC99;border-radius:5px;
 
   animation: marquee 8s linear infinite;
