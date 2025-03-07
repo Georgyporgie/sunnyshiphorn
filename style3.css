@@ -10,7 +10,7 @@
   display:block;
   width: 175px;
   margin: auto auto auto auto;
-
+padding: 5px;
   overflow: hidden;
   white-space: nowrap;
 }
