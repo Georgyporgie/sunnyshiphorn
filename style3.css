@@ -1,4 +1,4 @@
-#myImage  {    filter:brightness(100%) saturation(100%) contrast(100%) opacity(75%);width: 235px; height: 145px; margin-right: -5px; display: block; margin: auto auto auto auto ; border: solid #CCCCCC 3px; z-index: 200; border-radius: 50px;
+#myImage  {    filter:brightness(100%) saturation(100%) contrast(100%) opacity(75%);width: 235px; height: 175px; margin-right: -5px; display: block; margin: auto auto auto auto ; border: solid #CCCCCC 3px; z-index: 200; border-radius: 50px;
 
     
           }
