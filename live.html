@@ -35,16 +35,28 @@
 <script src= ""> </script>
 
 <script>
-//Get our img element by using document.getElementById
-var img = document.getElementById("myImage");
+  // Function to update the image source based on the time
+  function updateImage() {
+    const img = document.getElementById("myImage");
+    const now = new Date();
+    const hour = now.getHours(); // Get the current hour (0-23)
 
-//Set the src property of our element to the new image URL
-img.src = 'images/Miss Monique2.gif';
-</script>
+    if (hour >= 6 && hour < 12) {
+      img.src = 'images/transparent.png'; // Morning GIF
+    } else if (hour >= 12 && hour < 18) {
+      img.src = 'images/Miss Monique2.gif'; // Afternoon GIF
+    } else if (hour >= 18 && hour < 22) {
+      img.src = 'images/Miss Monique2.gif'; // Evening GIF
+    } else {
+      img.src = 'images/Miss Monique2.gif'; // Night GIF
+    }
+  }
 
+  // Call the updateImage function when the page loads
+  window.onload = updateImage;
 
-<script> 
-document.getElementById("marquee").innerHTML="<span><em><strong>Miss Monique Live Set!</em></strong></span>";
+  // Optionally, update the image every hour (or as desired)
+  setInterval(updateImage, 3600000); // 3600000 ms = 1 hour
 </script>
 
 </body>
