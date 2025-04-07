@@ -26,9 +26,33 @@
 <img id= "myImage">
 
 
+<script>
+
+// Function to update the image source based on the time
+  function updateImage() {
+    const img = document.getElementById("myImage");
+    const now = new Date();
+    const hour = now.getHours(); // Get the current hour (0-23)
+
+    if (hour >= 6 && hour < 12) {
+      img.src = 'images/transparent.png'; // Morning GIF
+    } else if (hour >= 12 && hour < 18) {
+      img.src = 'images/Bjorn Hamburger.png'; // Afternoon GIF
+    } else if (hour >= 18 && hour < 22) {
+      img.src = 'images/Sunny rock.gif'; // Evening GIF
+    } else {
+      img.src = 'images/transparent.png'; // Night GIF
+    }
+  }
+
+  // Call the updateImage function when the page loads
+  window.onload = updateImage;
+
+  // Optionally, update the image every hour (or as desired)
+  setInterval(updateImage, 3600000); // 3600000 ms = 1 hour
 
 
-
+</script>
 
 
 <script src= ""> </script>
@@ -38,7 +62,7 @@
 var img = document.getElementById("myImage");
 
 //Set the src property of our element to the new image URL
-img.src = 'images/transparent.png';
+img.src = '';
 </script>
 
 
