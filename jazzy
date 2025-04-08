@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+
+<title>   </title>
+<link rel="stylesheet" href="style3.css" >
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+ <div id= "marquee"> </div>
+<img id= "myImage">
+
+
+
+
+
+
+
+<script src= ""> </script>
+
+<script>
+  // Function to update the image source based on the time
+  function updateImage() {
+    const img = document.getElementById("myImage");
+    const now = new Date();
+    const hour = now.getHours(); // Get the current hour (0-23)
+    if (hour >= 6 && hour < 12) {
+      img.src = 'images/transparent.png'; // Morning GIF
+    } else if (hour >= 12 && hour < 18) {
+      img.src = 'images/transparent.png'; // Afternoon GIF
+    } else if (hour >= 18 && hour < 21) {
+      img.src = 'images/transparent.png'; // Evening GIF
+    } else {
+      img.src = 'images/transparent.png';
+// Night GIF
+    }
+  }
+
+  // Call the updateImage function when the page loads
+  window.onload = updateImage;
+
+  // Optionally, update the image every hour (or as desired)
+  setInterval(updateImage, 3600000); // 3600000 ms = 1 hour
+</script>
+
+</body>
+
+
+</html>
