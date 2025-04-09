@@ -43,8 +43,15 @@
     
    
    if (hour >= 6 && hour < 12) {
-      img.src = 'images/transparent.png'; // Morning GIF
-    } else if (hour >= 12 && hour < 18) {
+      img.src = 'images/aquarium.png'; // Morning GIF
+    
+   } else if (hour >= 12 && hour < 13) {
+      img.src = 'images//transparent.png'; // Afternoon GIF
+   
+   
+   
+   
+   } else if (hour >= 13 && hour < 18) {
       img.src = 'images//Sunny DanceRadio1.gif'; // Afternoon GIF
     
     
@@ -56,13 +63,22 @@
     
     
     
-    } else if (hour >= 18 && hour < 22) {
-      img.src = 'images/aquarium.png';
+    } else if (hour >= 21 && hour < 22) {
+      img.src = 'images/aquarium3.gif';
+// Night GIF
+  
+    
+       } else if (hour >= 22 && hour < 24) {
+      img.src = 'images/Sunny DanceRadio1.gif';
 // Night GIF
   
     
     
-    } else {
+    
+   
+   
+   
+   } else {
       img.src = 'images/aquarium3.gif';
     
     
