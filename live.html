@@ -40,15 +40,33 @@
     const img = document.getElementById("myImage");
     const now = new Date();
     const hour = now.getHours(); // Get the current hour (0-23)
-    if (hour >= 6 && hour < 12) {
+    
+   
+   if (hour >= 6 && hour < 12) {
       img.src = 'images/transparent.png'; // Morning GIF
     } else if (hour >= 12 && hour < 18) {
-      img.src = 'images//aquarium3.gif'; // Afternoon GIF
+      img.src = 'images//Sunny DanceRadio1.gif'; // Afternoon GIF
+    
+    
+    
+    
+    
     } else if (hour >= 18 && hour < 21) {
-      img.src = 'images/Sunny DanceRadio1.gif'; // Evening GIF
+      img.src = 'images/Lovely Miss Monique.gif'; // Evening GIF
+    
+    
+    
+    } else if (hour >= 18 && hour < 22) {
+      img.src = 'images/aquarium.png';
+// Night GIF
+  
+    
+    
     } else {
       img.src = 'images/aquarium3.gif';
-// Night GIF
+    
+    
+    
     }
   }
 
