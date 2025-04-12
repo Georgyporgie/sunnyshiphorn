@@ -24,7 +24,85 @@
 <br>
 
  <div id= "marquee"> </div>
-<img id= "myImage">
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script>
+  // Function to update the marquee content based on the time
+  function updateMarquee() {
+    const marquee = document.getElementById("marquee");
+    const now = new Date();
+    const hour = now.getHours(); // Get the current hour (0-23)
+
+    if (hour >= 3 && hour < 12) {
+      marquee.innerHTML = "<span><em><strong></strong></em></span>";
+   
+        
+    } else if (hour >= 12 && hour < 13) {
+      marquee.innerHTML = "<span><em><strong></strong></em></span>";
+    
+    
+    } else if (hour >= 13 && hour < 16) {
+      marquee.innerHTML = "<span><em><strong>DJ 'S Live Set</strong></em></span>";
+    } else if (hour >= 16 && hour < 21) {
+      marquee.innerHTML = "<span><em><strong> Miss Monique Live Set!</strong></em></span>";
+   
+    } else if (hour >= 21 && hour < 22) {
+      marquee.innerHTML = "<span><em><strong> </strong></em></span>";
+   
+        } else if (hour >= 22 && hour < 24) {
+      marquee.innerHTML = "<span><em><strong> Miss Monique Live Set 2!</strong></em></span>";
+    
+    
+    } else {
+      marquee.innerHTML = "<span><em><strong></strong></em></span>";
+    }
+  }
+
+  
+  
+  
+  // Call the updateMarquee function when the page loads
+  window.onload = function() {
+    updateMarquee();
+    updateImage(); // Ensure both functions are called if needed
+  };
+
+  // Optionally, update the marquee every hour
+  setInterval(updateMarquee, 3600000); // 3600000 ms = 1 hour
+</script>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <img id= "myImage">
 
 
 
