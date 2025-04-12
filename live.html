@@ -26,7 +26,7 @@
  <div id= "marquee"> </div>
 
  
- 
+  <img id= "myImage">
  
  
  
@@ -70,39 +70,30 @@
   
   
   
-  // Call the updateMarquee function when the page loads
-  window.onload = function() {
-    updateMarquee();
-    updateImage(); // Ensure both functions are called if needed
-  };
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
-  // Optionally, update the marquee every hour
-  setInterval(updateMarquee, 3600000); // 3600000 ms = 1 hour
-</script>
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- <img id= "myImage">
 
 
 
@@ -164,10 +155,16 @@
     }
   }
 
-window.onload = function() {
-    
-    updateImage(); 
+// Call the updateMarquee function when the page loads
+  window.onload = function() {
+    updateMarquee();
+    updateImage(); // Ensure both functions are called if needed
   };
+
+  // Optionally, update the marquee every hour
+  setInterval(updateMarquee, 3600000); // 3600000 ms = 1 hour
+</script>
+
 
 
 </body>
