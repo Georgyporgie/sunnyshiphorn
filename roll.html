@@ -38,11 +38,11 @@
       img.src = 'images/transparent.png'; // Morning GIF
     } else if (hour >= 12 && hour < 18) {
       img.src = 'images/Bjorn Hamburger.png'; // Afternoon GIF
-    } else if (hour >= 18 && hour < 21) {
-      img.src = 'images/Bjorn Hamburger.png'; // Evening GIF
-    
-    } else if (hour >= 21 && hour < 22) {
+    } else if (hour >= 18 && hour < 19) {
       img.src = 'images/aquarium.png'; // Evening GIF
+    
+    } else if (hour >= 19 && hour < 22) {
+      img.src = 'images/Bjorn Hamburger.png'; // Evening GIF
     
     
     
@@ -54,10 +54,92 @@
     }
   }
 
-  // Call the updateImage function when the page loads
-  window.onload = updateImage;
+  
 
-  // Optionally, update the image every hour (or as desired)
+ 
+ 
+ 
+ 
+ 
+  <script>
+  // Function to update the marquee content based on the time
+  function updateMarquee() {
+    const marquee = document.getElementById("marquee");
+    const now = new Date();
+    const hour = now.getHours(); // Get the current hour (0-23)
+
+    if (hour >= 6 && hour < 12) {
+      marquee.innerHTML = "<span><em><strong></strong></em></span>";
+   
+        
+    } else if (hour >= 12 && hour < 18) {
+      marquee.innerHTML = "<span><em><strong>Björn Hanburger Live Set!</strong></em></span>";
+    
+    
+    } else if (hour >= 18 && hour < 19) {
+      marquee.innerHTML = "<span><em><strong></strong></em></span>";
+    } else if (hour >= 19 && hour < 22) {
+      marquee.innerHTML = "<span><em><strong>Björn Hanburger Live Set!</strong></em></span>";
+
+   
+      
+    
+    
+    } else {
+      marquee.innerHTML = "<span><em><strong></strong></em></span>";
+    }
+  }
+
+  
+  
+  
+  // Call the updateMarquee function when the page loads
+  window.onload = function() {
+    updateMarquee();
+    updateImage(); // Ensure both functions are called if needed
+  };
+
+  // Optionally, update the marquee every hour
+  setInterval(updateMarquee, 3600000); // 3600000 ms = 1 hour
+</script>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ // Optionally, update the image every hour (or as desired)
   setInterval(updateImage, 3600000); // 3600000 ms = 1 hour
 
 
