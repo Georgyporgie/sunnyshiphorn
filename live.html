@@ -23,147 +23,52 @@
 <br>
 <br>
 
- <div id= "marquee"> </div>
 
- 
-  <img id= "myImage">
- 
- 
- 
- 
- 
- 
- 
- 
- <script>
-  // Function to update the marquee content based on the time
-  function updateMarquee() {
-    const marquee = document.getElementById("marquee");
-    const now = new Date();
-    const hour = now.getHours(); // Get the current hour (0-23)
 
-    if (hour >= 3 && hour < 12) {
-      marquee.innerHTML = "<span><em><strong></strong></em></span>";
-   
-        
-    } else if (hour >= 12 && hour < 13) {
-      marquee.innerHTML = "<span><em><strong></strong></em></span>";
-    
-    
-    } else if (hour >= 13 && hour < 16) {
-      marquee.innerHTML = "<span><em><strong>DJ 'S Live Set</strong></em></span>";
-    } else if (hour >= 16 && hour < 21) {
-      marquee.innerHTML = "<span><em><strong> Miss Monique Live Set!</strong></em></span>";
-   
-    } else if (hour >= 21 && hour < 22) {
-      marquee.innerHTML = "<span><em><strong> </strong></em></span>";
-   
-        } else if (hour >= 22 && hour < 24) {
-      marquee.innerHTML = "<span><em><strong> Miss Monique Live Set 2!</strong></em></span>";
-    
-    
-    } else {
-      marquee.innerHTML = "<span><em><strong></strong></em></span>";
+  <div id="marquee"></div>
+  <img id="myImage">
+  
+  <script>
+    // Function to update content based on time
+    function updateContent() {
+      const marquee = document.getElementById("marquee");
+      const img = document.getElementById("myImage");
+      const now = new Date();
+      const hour = now.getHours();
+
+      // Time-based content updates
+      if (hour >= 3 && hour < 12) {
+        marquee.innerHTML = "<span><em><strong>Good Morning!</strong></em></span>";
+        img.src = 'images/aquarium.png';
+      } else if (hour >= 12 && hour < 13) {
+        marquee.innerHTML = "<span><em><strong>Lunch Break Tunes</strong></em></span>";
+        img.src = 'images/transparent.png';
+      } else if (hour >= 13 && hour < 16) {
+        marquee.innerHTML = "<span><em><strong>DJ 'S Live Set</strong></em></span>";
+        img.src = 'images/SunnyDanceRadio1.gif';
+      } else if (hour >= 16 && hour < 21) {
+        marquee.innerHTML = "<span><em><strong>Miss Monique Live Set!</strong></em></span>";
+        img.src = 'images/MissMonique2.gif';
+      } else if (hour >= 21 && hour < 22) {
+        marquee.innerHTML = "<span><em><strong>Evening Chill Vibes</strong></em></span>";
+        img.src = 'images/aquarium3.gif';
+      } else if (hour >= 22 && hour < 24) {
+        marquee.innerHTML = "<span><em><strong>Miss Monique Live Set 2!</strong></em></span>";
+        img.src = 'images/LovelyMissMonique.gif';
+      } else {
+        marquee.innerHTML = "<span><em><strong>Good Night!</strong></em></span>";
+        img.src = 'images/aquarium3.gif';
+      }
     }
-  }
 
-  
-  
-  
-  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+    // Call the function on page load
+    window.onload = updateContent;
+
+    // Update every hour if needed
+    setInterval(updateContent, 3600000); // 1 hour
+  </script>
 
 
-
-
-
-
-
-
-<script src= ""> </script>
-
-<script>
-  // Function to update the image source based on the time
-  function updateImage() {
-    const img = document.getElementById("myImage");
-    const now = new Date();
-    const hour = now.getHours(); // Get the current hour (0-23)
-    
-   
-   if (hour >= 3 && hour < 12) {
-      img.src = 'images/aquarium.png'; // Morning GIF
-    
-   } else if (hour >= 12 && hour < 13) {
-      img.src = 'images/transparent.png'; // Afternoon GIF
-   
-   
-   
-   
-   } else if (hour >= 13 && hour < 16) {
-      img.src = 'images/Sunny DanceRadio1.gif'; // Afternoon GIF
-    
-    
-    
-    
-    
-    } else if (hour >= 16 && hour < 21) {
-      img.src = 'images/Miss Monique2.gif'; // Evening GIF
-    
-    
-    
-    } else if (hour >= 21 && hour < 22) {
-      img.src = 'images/aquarium3.gif';
-// Night GIF
-  
-    
-       } else if (hour >= 22 && hour < 24) {
-      img.src = 'images/Lovely Miss Monique.gif';
-// Night GIF
-  
-    
-    
-    
-   
-   
-   
-   } else {
-      img.src = 'images/aquarium3.gif';
-    
-    
-    
-    }
-  }
-
-// Call the updateMarquee function when the page loads
-  window.onload = function() {
-    updateMarquee();
-    updateImage(); // Ensure both functions are called if needed
-  };
-
-  // Optionally, update the marquee every hour
-  setInterval(updateMarquee, 3600000); // 3600000 ms = 1 hour
-</script>
 
 
 
