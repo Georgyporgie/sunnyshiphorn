@@ -25,48 +25,49 @@
 
 
 
-  <div id="marquee"></div>
-  <img id="myImage">
-  
-  <script>
-    // Function to update content based on time
-    function updateContent() {
-      const marquee = document.getElementById("marquee");
-      const img = document.getElementById("myImage");
-      const now = new Date();
-      const hour = now.getHours();
+ <img id="myImage">
 
-      // Time-based content updates
-      if (hour >= 4 && hour < 12) {
-        marquee.innerHTML = "<span><em><strong>no broadcast</strong></em></span>";
-        img.src = 'images/aquarium.png';
-      } else if (hour >= 12 && hour < 13) {
-        marquee.innerHTML = "<span><em><strong>no broadcast</strong></em></span>";
-        img.src = 'images/transparent.png';
-      } else if (hour >= 13 && hour < 16) {
-        marquee.innerHTML = "<span><em><strong>Miss Monique Live Set!</strong></em></span>";
-        img.src = 'images/Lovely Miss Monique.gif';
-      } else if (hour >= 16 && hour < 20) {
-        marquee.innerHTML = "<span><em><strong></strong></em></span>";
-        img.src = 'images/Sunny DanceRadio.png';
-      } else if (hour >= 20 && hour < 22) {
-        marquee.innerHTML = "<span><em><strong>Happy Listening!</strong></em></span>";
-        img.src = 'images/Sunny DanceRadio.png';
-      } else if (hour >= 22 && hour < 24) {
-        marquee.innerHTML = "<span><em><strong>Good Night!</strong></em></span>";
-        img.src = 'images/Sunny DanceRadio.png';
-      } else {
-        marquee.innerHTML = "<span><em><strong>no broadcast</strong></em></span>";
-        img.src = 'images/aquarium3.gif';
-      }
+<div id="timeMessage" style="font-size: 1.5em; font-style: italic; font-weight: bold;"></div>
+
+<script>
+  // Function to update content based on time
+  function updateContent() {
+    const timeMessage = document.getElementById("timeMessage");
+    const img = document.getElementById("myImage");
+    const now = new Date();
+    const hour = now.getHours();
+
+    // Time-based content updates
+    if (hour >= 4 && hour < 12) {
+      timeMessage.textContent = "no broadcast";
+      img.src = 'images/aquarium.png';
+    } else if (hour >= 12 && hour < 13) {
+      timeMessage.textContent = "no broadcast";
+      img.src = 'images/transparent.png';
+    } else if (hour >= 13 && hour < 16) {
+      timeMessage.textContent = "Miss Monique Live Set!";
+      img.src = 'images/Lovely Miss Monique.gif';
+    } else if (hour >= 16 && hour < 20) {
+      timeMessage.textContent = "Afternoon Beats";
+      img.src = 'images/Sunny DanceRadio.png';
+    } else if (hour >= 20 && hour < 22) {
+      timeMessage.textContent = "Happy Listening!";
+      img.src = 'images/Sunny DanceRadio.png';
+    } else if (hour >= 22 && hour < 24) {
+      timeMessage.textContent = "Good Night!";
+      img.src = 'images/Sunny DanceRadio.png';
+    } else {
+      timeMessage.textContent = "no broadcast";
+      img.src = 'images/aquarium3.gif';
     }
+  }
 
-    // Call the function on page load
-    window.onload = updateContent;
+  // Call the function on page load
+  window.onload = updateContent;
 
-    // Update every hour if needed
-    setInterval(updateContent, 3600000); // 1 hour
-  </script>
+  // Update every minute for real-time accuracy
+  setInterval(updateContent, 60000); // 1 minute
+</script>
 
 
 
