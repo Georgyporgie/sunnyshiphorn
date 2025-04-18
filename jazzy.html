@@ -37,21 +37,25 @@
 <script>
   // Function to update the image source based on the time
   function updateImage() {
-    const img = document.getElementById("myImage");
+    const timeMessage = document.getElementById("timeMessage"); 
+   const img = document.getElementById("myImage");
     const now = new Date();
     const hour = now.getHours(); // Get the current hour (0-23)
     if (hour >= 6 && hour < 12) {
       img.src = 'images/transparent.png'; // Morning GIF
     } else if (hour >= 12 && hour < 18) {
-      img.src = 'images/DJ Saphire2.png'; // Afternoon GIF
+      timeMessage.textContent = "Love From DJ Sapphire";
+     img.src = 'images/DJ Saphire2.png'; // Afternoon GIF
     
     
     
     } else if (hour >= 18 && hour < 21) {
-      img.src = 'images/Sunny DanceRadio444.png'; // Evening GIF
+      timeMessage.textContent = "DJ George Footloose";
+     img.src = 'images/Sunny DanceRadio444.png'; // Evening GIF
     
      } else if (hour >= 21 && hour < 23) {
-      img.src = 'images/Miss June.gif'; // Evening GIF
+       timeMessage.textContent = "Miss June Live!";
+     img.src = 'images/Miss June.gif'; // Evening GIF
     
     
     
