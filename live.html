@@ -69,38 +69,7 @@
   setInterval(updateContent, 60000); // 1 minute
 </script>
 
-<img id= "virtua">
 
- <br>
-<br>
- 
- 
- 
- 
- <script>
-  // Function to update the image source based on the time
-  function updateVisua() {
-    const img = document.getElementById("virtua");
-    const now = new Date();
-    const hour = now.getHours(); // Get the current hour (0-23)
-
-    if (hour >= 6 && hour < 12) {
-      img.src = 'images/AudioVisualizer.png'; // Morning GIF
-    } else if (hour >= 12 && hour < 18) {
-      img.src = 'images/AudioVisualizer.gif'; // Afternoon GIF
-    } else if (hour >= 18 && hour < 22) {
-      img.src = 'images/AudioVisualizer.png'; // Evening GIF
-    } else {
-      img.src = 'images/AudioVisualizer.gif'; // Night GIF
-    }
-  }
-
-  // Call the updateImage function when the page loads
-  window.onload = updateVisua;
-
-  // Optionally, update the image every hour (or as desired)
-  setInterval(updateImage, 3600000); // 3600000 ms = 1 hour
-</script>
 
 
 </body>
