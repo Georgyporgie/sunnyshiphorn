@@ -34,10 +34,10 @@
    const img = document.getElementById("myImage");
     const now = new Date();
     const hour = now.getHours(); // Get the current hour (0-23)
-    if (hour >= 6 && hour < 12) {
+    if (hour >= 3 && hour < 12) {
       img.src = 'images/transparent.png'; // Morning GIF
     } else if (hour >= 12 && hour < 17) {
-      timeMessage.textContent = "Happy Kingsday!";
+      timeMessage.textContent = "Good Vibes";
      img.src = 'images/DJ Saphire good vibes.png'; // Afternoon GIF
     
     
@@ -48,12 +48,12 @@
     
      } else if (hour >= 21 && hour < 23) {
        timeMessage.textContent = "Live Kingsday!";
-     img.src = 'images/Miss Chang.png'; // Evening GIF
+     img.src = 'images/Miss June.gif'; // Evening GIF
     
     
     
     } else {
-      img.src = 'images/transparent.png';
+      img.src = 'images/Miss June.gif';
 // Night GIF
     }
   }
