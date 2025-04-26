@@ -38,7 +38,7 @@
     const hour = now.getHours();
 
     // Time-based content updates
-    if (hour >= 4 && hour < 12) {
+    if (hour >= 2 && hour < 12) {
       timeMessage.textContent = "no broadcast";
       img.src = 'images/aquarium.png';
     } else if (hour >= 12 && hour < 13) {
@@ -48,7 +48,7 @@
       timeMessage.textContent = "Happy Kingsday!";
       img.src = 'images/Miss Monique2.gif';
     } else if (hour >= 17 && hour < 20) {
-      timeMessage.textContent = "DJ Sapphire Love";
+      timeMessage.textContent = "Miss Monique Live Kings";
       img.src = 'images/Miss Monique2.gif';
     } else if (hour >= 20 && hour < 22) {
       timeMessage.textContent = " Miss Monique Live!";
@@ -57,8 +57,8 @@
       timeMessage.textContent = "Happy Kingsday!";
       img.src = 'images/Lovely Miss Monique.gif';
     } else {
-      timeMessage.textContent = "no broadcast";
-      img.src = 'images/aquarium3.gif';
+      timeMessage.textContent = "Miss Kings!";
+      img.src = 'images/Lovely Miss Monique.gif';
     }
   }
 
