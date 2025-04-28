@@ -1,5 +1,5 @@
 <div class="container">
-  <img src="images/Sunny Ship22.png" alt="Ship" style="width:25%">
+  <img src="images/Sunny Ship22.png" alt="Ship" style="width:25%; position: relative; z-index: 2;">
   <button class="btn" onclick="playAudio()" type="button">HORN</button>
 </div>
 
@@ -7,17 +7,16 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 200px;
+  max-width: 400px; /* Optionally adjust max-width for scaling */
   background: url('images/Dua Lipa.png') no-repeat center center;
-  background-size: cover;
-  opacity: 0.3; /* Adjust this value for lower opacity of the background */
+  background-size: 120%; /* Increase the size of Dua Lipa's image */
 }
 
 .container img {
-  width: 100%;
+  width: 25%; /* Make the ship image smaller to emphasize the background */
   height: auto;
-  position: relative; /* Keep the ship image above the background */
-  z-index: 1;
+  position: relative;
+  z-index: 2; /* Keep the ship image above the background */
 }
 
 .container .btn {
@@ -34,7 +33,7 @@
   cursor: pointer;
   border-radius: 30px;
   text-align: center;
-  z-index: 2; /* Ensure the button is on top */
+  z-index: 3; /* Ensure the button stays on top */
 }
 
 .container .btn:hover {
