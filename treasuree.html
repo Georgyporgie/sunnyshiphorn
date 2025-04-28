@@ -1,7 +1,19 @@
-<div class="container">
-  <img src="images/Sunny Ship22.png" alt="Ship" style="width:25%; position: relative; z-index: 2;">
-  <button class="btn" onclick="playAudio()" type="button">HORN</button>
-</div>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+
+
+
 
 <style>
 .container {
@@ -15,11 +27,11 @@
 .container img {
   width: 25%; /* Make the ship image smaller to emphasize the background */
   height: auto;
-  position: relative;
+  
   z-index: 2; /* Keep the ship image above the background */
 }
 
-.container .btn {
+.container.btn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -40,9 +52,17 @@
   background-color: black;
 }
 </style>
-
-
-
+</head>
+<body>
+<br>
+<br> 
+  
+  
+  
+ <div class="container">
+  <img src="images/Sunny Ship22.png" alt="Ship" style="width:25%; position: relative; z-index: 2;">
+  <button class="btn" onclick="playAudio()" type="button">HORN</button>
+</div>
 
 
 <audio id="horn">
@@ -69,6 +89,6 @@ function playAudio() {
 <script>
 document.getElementById("horn").setAttribute('src', 'muziek/effects/ship horn.mp3');
 </script>
-
-
+</body>
+</html>
 
