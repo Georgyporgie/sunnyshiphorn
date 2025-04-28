@@ -34,7 +34,7 @@
    const img = document.getElementById("myImage");
     const now = new Date();
     const hour = now.getHours(); // Get the current hour (0-23)
-    if (hour >= 3 && hour < 12) {
+    if (hour >= 7 && hour < 12) {
       img.src = 'images/transparent.png'; // Morning GIF
     } else if (hour >= 12 && hour < 17) {
       timeMessage.textContent = "";
@@ -50,7 +50,9 @@
        timeMessage.textContent = "";
      img.src = 'images/aquarium3.gif'; // Evening GIF
     
-    
+         } else if (hour >= 23 && hour < 3) {
+       timeMessage.textContent = "";
+     img.src = 'images/aquarium3.gif'; // Evening GIF
     
     } else {
       img.src = 'images/aquarium3.gif';
