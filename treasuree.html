@@ -1,5 +1,5 @@
 <div class="container">
-  <img src="images/Sunny Ship2.png" alt="Ship" style="width:100%">
+  <img src="images/Sunny Ship22.png" alt="Ship" style="width:100%">
   <button class="btn" onclick="playAudio()" type="button">HORN</button>
 </div>
 
@@ -41,3 +41,35 @@
   background-color: black;
 }
 </style>
+
+
+
+
+
+<audio id="horn">
+  <source src="" type="audio/ogg">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<script>
+var x = document.getElementById("horn"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+
+
+
+
+
+
+
+</script>
+
+<script>
+document.getElementById("horn").setAttribute('src', 'muziek/effects/ship horn.mp3');
+</script>
+
+
+
