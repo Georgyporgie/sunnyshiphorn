@@ -27,34 +27,23 @@
 
 
 <script>
-
-// Function to update the image source based on the time
   function updateImage() {
     const img = document.getElementById("myImage");
     const now = new Date();
     const hour = now.getHours(); // Get the current hour (0-23)
 
     if (hour >= 9 && hour < 12) {
-      img.src = 'images/transparent.png'; // Morning GIF
+      img.src = 'images/transparent.png'; // Morning image
     } else if (hour >= 12 && hour < 18) {
-      img.src = 'images/North Sea live.gif'; // Afternoon GIF
-    } else if (hour >= 18 && hour < 3) {
-      img.src = 'images/Sunny rock.gif'; // Evening GIF
-    
-    } else if (hour >= 3 && hour < 7) {
-      img.src = 'images/aquarium.png'; // Evening GIF
-    
-    
-    
-    
-    
-    
-    } else {
-      img.src = 'images/aquarium3.gif'; // Night GIF
+      img.src = 'images/North Sea live.gif'; // Afternoon image
+    } else if (hour >= 18 && hour < 23) {
+      img.src = 'images/Sunny rock.gif'; // Evening image
+    } else if (hour >= 23 || hour < 7) {
+      img.src = 'images/aquarium3.gif'; // Night image
     }
   }
-
 </script>
+
 
  
  
