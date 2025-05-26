@@ -25,49 +25,44 @@
 
 
 
- <img id="myImage">
+function updateImage() {
+  const timeMessage = document.getElementById("timeMessage"); 
+  const img = document.getElementById("myImage");
+  const now = new Date();
+  const hour = now.getHours();
+  const day = now.getDay();
 
-<div id="timeMessage" style="font-size: 1.5em; font-style: italic; font-weight: bold;color:black;"></div>
+  const isWeekend = (day === 0 || day === 6);
 
-<script>
-  // Function to update content based on time
-  function updateContent() {
-    const timeMessage = document.getElementById("timeMessage");
-    const img = document.getElementById("myImage");
-    const now = new Date();
-    const hour = now.getHours();
-
-    // Time-based content updates
-    if (hour >= 3 && hour < 7) {
-      timeMessage.textContent = "no broadcast";
-      img.src = 'images/aquarium3.gif';
-
-    } else if (hour >= 7 && hour < 12) {
-      timeMessage.textContent = "";
-      img.src = 'images/aquarium3.gif';
+  if (isWeekend) {
+    if (hour >= 7 && hour < 12) {
+      img.src = 'images/weekend_morning.gif'; // Weekend morning image
     } else if (hour >= 12 && hour < 17) {
-      timeMessage.textContent = "";
-      img.src = 'images/aquarium3.gif';
-
+      img.src = 'images/weekend_afternoon.gif'; // Weekend afternoon image
     } else if (hour >= 17 && hour < 21) {
-      timeMessage.textContent = "";
-      img.src = 'images/aquarium.png';
-      
-    } else if (hour >= 21 && hour < 24) {
-      timeMessage.textContent = "";
-      img.src = 'images/transparent.png';
-    
+      img.src = 'images/weekend_evening.gif'; // Weekend evening image
     } else {
-      timeMessage.textContent ="";
-      img.src = 'images/aquarium3.gif';
+      img.src = 'images/weekend_night.gif'; // Weekend night image
+    }
+  } else {
+    if (hour >= 7 && hour < 12) {
+      img.src = 'images/transparent.png'; // Morning GIF
+    } else if (hour >= 12 && hour < 17) {
+      img.src = 'images/aquarium3.gif'; // Afternoon GIF
+    } else if (hour >= 17 && hour < 23) {
+      img.src = 'images/transparent.png'; // Evening GIF
+    } else {
+      img.src = 'images/aquarium3.gif'; // Night GIF
     }
   }
+}
 
-  // Call the function on page load
-  window.onload = updateContent;
+// Call the updateImage function when the page loads
+window.onload = updateImage;
 
-  // Update every minute for real-time accuracy
-  setInterval(updateContent, 60000); // 1 minute
+// Update the image every hour
+setInterval(updateImage, 3600000);
+
 </script>
 
 
