@@ -1,9 +1,9 @@
 #Queen
 
 { 
-padding : 3px 3px 3px 3px; font-style :  italic;  background-color: silver;
+padding : 3px 3px 3px 3px; font-style :  italic;  
  z-index: 100;
- filter:brightness(102%) saturation(105%) contrast(120%) opacity(0%); 
+ filter:brightness(102%) saturation(105%) contrast(110%) opacity(0%); 
 transform: rotate(-2deg);
  border-radius: 40px; 
 margin :80px 100px 30px 30px;
