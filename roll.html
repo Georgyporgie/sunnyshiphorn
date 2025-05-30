@@ -24,7 +24,7 @@
 <br>
  <div id= "marquee"> </div>
 <img id= "myImage">
-
+   <p id="timeMessage"></p>
 
 <script>
  function updateImage() {
@@ -41,10 +41,13 @@
       img.src = 'images/weekend_morning.gif'; // Weekend morning image
     } else if (hour >= 12 && hour < 17) {
       img.src = 'images/Sunny rock.gif'; // Weekend afternoon image
+     timeMessage.textContent = "The Hillbillies!";
     } else if (hour >= 17 && hour < 21) {
       img.src = 'images/Sunny rock.gif'; // Weekend evening image
+       timeMessage.textContent = "The Hillbillies!";
     } else {
       img.src = 'images/Sunny rock.gif'; // Weekend night image
+      timeMessage.textContent = "The Hillbillies!";
     }
   } else {
     if (hour >= 7 && hour < 12) {
