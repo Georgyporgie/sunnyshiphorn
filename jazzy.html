@@ -24,7 +24,7 @@ function updateImage() {
   const hour = now.getHours();
   const day = now.getDay();
 
-  const isWeekend = (day === 0|| day === 6);
+const isWeekend = (day === 0 || day === 5 || day === 6);
 
   if (isWeekend) {
     if (hour >= 7 && hour < 12) {
@@ -40,7 +40,7 @@ function updateImage() {
     if (hour >= 7 && hour < 12) {
       img.src = 'images/transparent.png'; // Morning GIF
     } else if (hour >= 12 && hour < 17) {
-      img.src = 'images/DJ Saphire good vibes.png'; // Afternoon GIF
+      img.src = 'images/aquarium3.gif'; // Afternoon GIF
     } else if (hour >= 17 && hour < 23) {
       img.src = 'images/DJ Saphire2.png'; // Evening GIF
     } else {
