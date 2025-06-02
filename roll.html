@@ -54,10 +54,13 @@
       img.src = 'images/transparent.png'; // Morning GIF
     } else if (hour >= 12 && hour < 17) {
       img.src = 'images/aquarium3.gif'; // Afternoon GIF
+     timeMessage.textContent = "Good morning!";
     } else if (hour >= 17 && hour < 23) {
       img.src = 'images/transparent.png'; // Evening GIF
+     timeMessage.textContent = "Afternoon Rockin"!";
     } else {
-      img.src = 'images/aquarium3.gif'; // Night GIF
+      timeMessage.textContent = "Rock You Event!";
+     img.src = 'images/aquarium3.gif'; // Night GIF
     }
   }
 }
