@@ -28,7 +28,7 @@
     const day = now.getDay();
 
     // Adjusted weekend logic
-    const isWeekend = (day === 6 || day === 1) || (day === 5 && hour >= 18) || (day === 0 && hour < 21);
+    const isWeekend = (day === 6 || day === 0) || (day === 5 && hour >= 18) || (day === 0 && hour < 21);
 
     if (isWeekend) {
         if (hour >= 7 && hour < 12) {
