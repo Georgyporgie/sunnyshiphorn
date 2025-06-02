@@ -20,42 +20,45 @@
 <p id="timeMessage"></p>
 
   <script>
-function updateImage() {
-  const timeMessage = document.getElementById("timeMessage"); 
-  const img = document.getElementById("myImage");
-  const now = new Date();
-  const hour = now.getHours();
-  const day = now.getDay();
+     function updateImage() {
+    const timeMessage = document.getElementById("timeMessage"); 
+    const img = document.getElementById("myImage");
+    const now = new Date();
+    const hour = now.getHours();
+    const day = now.getDay();
 
-const isWeekend = (day === 0 || day === 5 || day === 6);
+    // Adjusted weekend logic
+    const isWeekend = (day === 6 || day === 0) || (day === 5 && hour >= 18) || (day === 0 && hour < 21);
 
-  if (isWeekend) {
-    if (hour >= 7 && hour < 12) {
-      img.src = 'images/transoarent.png'; // Weekend morning image
-    } else if (hour >= 12 && hour < 17) {
-      img.src = 'images/Miss June.gif'; // Weekend afternoon image
-     timeMessage.textContent = "June Live!";
-    
-    } else if (hour >= 17 && hour < 21) {
-      img.src = 'images/Miss June.gif'; // Weekend evening image
-    timeMessage.textContent = "June Live!";
-
+    if (isWeekend) {
+        if (hour >= 7 && hour < 12) {
+            img.src = 'images/aquarium3.gif'; 
+            timeMessage.textContent = "Good morning!";
+        } else if (hour >= 12 && hour < 17) {
+            img.src = 'images/DJ S.gif';
+            timeMessage.textContent = "DJ 'S Live!";
+        } else if (hour >= 17 && hour < 21) {
+            img.src = 'images/DJ S.gif';
+            timeMessage.textContent = "DJ 'S!";
+        } else {
+            img.src = 'images/aquarium.png';
+            timeMessage.textContent = "Good Night!";
+        }
     } else {
-      img.src = 'images/transparent.png'; // Weekend night image
-    timeMessage.textContent = "Good Night!";
-
+        if (hour >= 7 && hour < 12) {
+            img.src = 'images/transparent.png';
+            timeMessage.textContent = "Good morning!";
+        } else if (hour >= 12 && hour < 17) {
+            img.src = 'images/aquarium.png';
+            timeMessage.textContent = "Afternoon vibes!";
+        } else if (hour >= 17 && hour < 23) {
+            img.src = 'images/transparent.png';
+            timeMessage.textContent = "Evening mood!";
+        } else {
+            img.src = 'images/aquarium3.gif';
+            timeMessage.textContent = "Night reflections!";
+        }
     }
-  } else {
-    if (hour >= 7 && hour < 12) {
-      img.src = 'images/transparent.png'; // Morning GIF
-    } else if (hour >= 12 && hour < 17) {
-      img.src = 'images/aquarium3.gif'; // Afternoon GIF
-    } else if (hour >= 17 && hour < 23) {
-      img.src = 'images/DJ Saphire2.png'; // Evening GIF
-    } else {
-      img.src = 'images/aquarium3.gif'; // Night GIF
-    }
-  }
 }
 
 // Call the updateImage function when the page loads
