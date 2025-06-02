@@ -19,7 +19,7 @@
             const hour = now.getHours();
             const day = now.getDay();
 
-          const isWeekend = (day === 0 || day === 1 && currentHour >= 18 || day === 6);
+       const isWeekend = (day === 0 || day === 5 || day === 6);
 
             if (isWeekend) {
                 if (hour >= 7 && hour < 12) {
