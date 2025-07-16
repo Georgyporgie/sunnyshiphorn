@@ -3,65 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Image Update</title>
+    <title>Dynamic Sunday Schedule</title>
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
     <br><br><br><br>
-    <img id="myImage" src="images/placeholder.png"> <!-- Default image -->
+    <img id="myImage" src="images/placeholder.png" alt="Schedule image">
     <p id="timeMessage"></p>
 
     <script>
-     function updateImage() {
-    const timeMessage = document.getElementById("timeMessage"); 
-    const img = document.getElementById("myImage");
-    const now = new Date();
-    const hour = now.getHours();
-    const day = now.getDay();
+      function updateImage() {
+        const timeMessage = document.getElementById("timeMessage");
+        const img = document.getElementById("myImage");
+        const now = new Date();
+        const hour = now.getHours();
+        const day = now.getDay();
 
-    // Adjusted weekend logic
-    const isWeekend = (day === 6 || day === 0) || (day === 5 && hour >= 18) || (day === 0 && hour < 21);
+        // Sunday-specific schedule
+        if (day === 0) {
+          if (hour >= 6 && hour < 12) {
+            img.src = 'images/sunday_service.gif';
+            timeMessage.textContent = "Sunday Morning Service";
+          } else if (hour >= 12 && hour < 17) {
+            img.src = 'images/sunday_brunch.png';
+            timeMessage.textContent = "Sunday Brunch Time";
+          } else if (hour >= 17 && hour < 21) {
+            img.src = 'images/jazz_relax.gif';
+            timeMessage.textContent = "Sunday Evening Jazz";
+          } else {
+            img.src = 'images/sunday_movie.gif';
+            timeMessage.textContent = "Sunday Night Movie";
+          }
 
-    if (isWeekend) {
-        if (hour >= 7 && hour < 12) {
-            img.src = 'images/aquarium3.gif'; 
-            timeMessage.textContent = "Good morning!";
-        } else if (hour >= 12 && hour < 17) {
+        // Saturday (and late Friday) as weekend
+        } else if (
+          day === 6 ||
+          (day === 5 && hour >= 18)
+        ) {
+          if (hour >= 7 && hour < 12) {
+            img.src = 'images/aquarium3.gif';
+            timeMessage.textContent = "Saturday Morning Aquatics";
+          } else if (hour < 17) {
             img.src = 'images/Miss Monique2.gif';
             timeMessage.textContent = "DJ Sapphire Live!";
-        } else if (hour >= 17 && hour < 21) {
+          } else if (hour < 21) {
             img.src = 'images/Miss Monique2.gif';
             timeMessage.textContent = "DJ Sapphire Live!";
-         } else if (hour >= 21 && hour < 23) {
+          } else {
             img.src = 'images/Lovely Miss Monique.gif';
-            timeMessage.textContent = "DJ Sapphire Live!";
-        
-        
-        
+            timeMessage.textContent = "Late Night Beats";
+          }
+
+        // All other weekdays
         } else {
-            img.src = 'images/aquarium.png';
-            timeMessage.textContent = "Good Night!";
-        }
-    } else {
-        if (hour >= 7 && hour < 12) {
+          if (hour >= 7 && hour < 12) {
             img.src = 'images/transparent.png';
             timeMessage.textContent = "Good morning!";
-        } else if (hour >= 12 && hour < 17) {
+          } else if (hour < 17) {
             img.src = 'images/aquarium.png';
             timeMessage.textContent = "Afternoon vibes!";
-        } else if (hour >= 17 && hour < 23) {
+          } else if (hour < 23) {
             img.src = 'images/transparent.png';
             timeMessage.textContent = "Evening mood!";
-        } else {
+          } else {
             img.src = 'images/aquarium3.gif';
             timeMessage.textContent = "Night reflections!";
+          }
         }
-    }
-}
+      }
 
-
-        window.onload = updateImage;
-        setInterval(updateImage, 3600000);
+      window.onload = updateImage;
+      setInterval(updateImage, 3600000);
     </script>
 </body>
 </html>
