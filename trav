@@ -119,7 +119,7 @@
 
     function updateImages() {
       const now = new Date();
-      const ruleTravolta = getRuleFor(now);
+      const ruleUsers = getRuleFor(now);
       const ruleMax = getComplementaryRule(now, ruleUsers.src);
 users
       setImage(document.getElementById('users'), ruleUsers);
@@ -153,6 +153,7 @@ users
    </body>
 
 </html>
+
 
 
 
